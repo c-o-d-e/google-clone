@@ -22,6 +22,10 @@ const RightLinks = styled.div`
 const NavLinks = styled(Link)`
     padding: 0 8px;
     text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+
     color: ${link =>
         link.className == "rightlinks" ? "rgba(0, 0, 0, 0.75)" : "#000"};
 
