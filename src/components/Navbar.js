@@ -22,7 +22,8 @@ const RightLinks = styled.div`
 const NavLinks = styled(Link)`
     padding: 0 8px;
     text-decoration: none;
-    color: #000;
+    color: ${link =>
+        link.className == "rightlinks" ? "rgba(0, 0, 0, 0.75)" : "#000"};
 
     svg {
         height: 24px;
@@ -61,10 +62,10 @@ function Navbar() {
                 <NavLinks to="/store">Store</NavLinks>
             </LeftLinks>
             <RightLinks>
-                <NavLinks style={{ color: "rgba(0, 0, 0, 0.8)" }} to="/gmail">
+                <NavLinks className="rightlinks" to="/gmail">
                     Gmail
                 </NavLinks>
-                <NavLinks style={{ color: "rgba(0, 0, 0, 0.8)" }} to="/images">
+                <NavLinks className="rightlinks" to="/images">
                     Images
                 </NavLinks>
                 <NavLinks to="/">
